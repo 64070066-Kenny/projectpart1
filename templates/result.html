@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <h1>Detection Result</h1>
+    <img src="{{ url_for('send_result_file', result_folder=result_folder, filename=filename) }}" class="result-image">
+    <br>
+    <a href="/" class="button">Return to Home</a>
+  </body>
+</html>
