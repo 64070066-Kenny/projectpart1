@@ -10,4 +10,6 @@ tqdm
 seaborn
 opencv-python
 requests
+line-bot-sdk
+
 -f https://download.pytorch.org/whl/torch_stable.html
