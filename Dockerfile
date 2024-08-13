@@ -12,5 +12,5 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN pip install --upgrade pip && pip install -r requirements.txt
 COPY . .
-EXPOSE 8081
+EXPOSE 8080
 CMD ["python", "app.py"]
