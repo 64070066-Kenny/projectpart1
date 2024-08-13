@@ -1,13 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Detection Result</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-  </head>
-  <body>
-    <h1>Detection Result</h1>
-    <img src="{{ url_for('send_result_file', result_folder=result_folder, filename=filename) }}" class="result-image">
-    <br>
-    <a href="/" class="button">Return to Home</a>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 20px;
+        }
+        pre {
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: left;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Detection Results</h1>
+        <img src="{{ image_url }}" alt="Detection Result">
+        <h2>Label Information:</h2>
+        <pre>{{ label_content }}</pre>
+        <a href="/" class="button">Back to Home</a>
+    </div>
+</body>
 </html>
